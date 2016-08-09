@@ -68,7 +68,7 @@ function RotateBlock(){
     if(Input.GetKeyDown(KeyCode.E)){
 
         //blockPos = Vector3(0,90,0);
-        transform.Rotate(Vector3.left);
+        block.transform.rotation = Quaternion.Euler(0,90,0);
 
         moveDelay = Mathf.Max(0.5, moveDelay - 0.01);
         
@@ -78,7 +78,7 @@ function RotateBlock(){
     if(Input.GetKeyDown(KeyCode.Q)){
 
         //blockPos = Vector3(0,-90,0);
-        transform.Rotate(Vector3.right);
+        block.transform.rotation = Quaternion.Euler(0,-90,0);
 
         moveDelay = Mathf.Max(0.5, moveDelay - 0.01);
         
@@ -90,6 +90,6 @@ function OnTriggerEnter(other : Collider){
 
     if(other.gameObject.tag == "Respawn"){
         dead = true;
-        Destroy(block);
+        Destroy(this.gameObject);
     }
 }
