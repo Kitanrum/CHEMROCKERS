@@ -40,7 +40,7 @@ public class WaterBlock : MonoBehaviour {
 		{
 			currentState = "Moving To Position 2";
 			newPosition = Position2.position;
-            WaterCube1.rotation = Quaternion.Euler(0, 90, 0);
+            WaterCube1.rotation = Quaternion.Euler(0, 0, 90);
         }
 		else if(currentState == "Moving To Position 2")
 		{
@@ -52,13 +52,13 @@ public class WaterBlock : MonoBehaviour {
 		{
 			currentState = "Moving To Position 4";
 			newPosition = Position4.position;
-            WaterCube1.rotation = Quaternion.Euler(0, 90, 0);
+            WaterCube1.rotation = Quaternion.Euler(0, 0, 90);
         }
 		else if(currentState == "")
 		{
 			currentState = "Moving To Position 4";
 			newPosition = Position4.position;
-            WaterCube1.rotation = Quaternion.Euler(0, 90, 0);
+            WaterCube1.rotation = Quaternion.Euler(0, 0, 90);
         }
 		Invoke("ChangeTarget", resetTime);
 	}
